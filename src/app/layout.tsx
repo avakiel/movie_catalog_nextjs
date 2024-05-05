@@ -3,10 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header/Header'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'Best Movies',
+  title: 'Netflix',
   description: 'Movie catalog',
 }
 
@@ -17,9 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <link rel="icon" href='/img/Netflix_2015_N_logo.svg.png' sizes='10px' />
+      </head>
+      <body className="h-full overflow-x-hidden relative z-0">
         <Header />
+        <main className='main'>
         {children}
+        </main>
       </body>
     </html>
   )
