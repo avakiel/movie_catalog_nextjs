@@ -13,14 +13,17 @@ export default function MovieCard({ movie }: MovieCardProps) {
         <Image
           src={movie.image}
           alt={movie.title}
-          width={150}
+          width={200}
           height={250}
           className="rounded-md"
+          style={{ height: '250px' }}
         />
       </div>
-      <div className="card__content">
-        <div className="card__content-title"></div>
-        <div className="card__content-desc"></div>
+      <div className="flex flex-col gap-1 items-center mt-3 justify-center flew">
+        <div className="card__content-title font-semibold text-white text-xl">{movie.title}</div>
+        <div className="card__content-genre">{movie.genre}</div>
+        <div className="card__content-rating">{movie.rating}</div>
+        <div className="card__content-release">{movie.release_date}</div>
       </div>
     </div>
   )

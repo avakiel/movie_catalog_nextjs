@@ -27,7 +27,7 @@ export default function Nav() {
       </Link>
       <Link
         className={classNames('link', { active: currentPath === '/catalog' })}
-        href="/catalog"
+        href="/movies"
       >
         Catalog
       </Link>
